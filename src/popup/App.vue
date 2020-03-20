@@ -1,5 +1,15 @@
 <template>
   <div id="app">
-    <router-view />
+    {{ test }}
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      test: 'test!',
+    };
+  },
+};
+</script>
