@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "dev": "npm run clean && NODE_ENV=development webpack",
-    "prod": "NODE_ENV=production webpack"
+    "dev": "npm run clean && NODE_ENV=development webpack-dev-server",
+    "prod": "NODE_ENV=production webpack",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -44,10 +45,17 @@
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/test-utils": "^1.0.0-beta.32",
+    "chai": "^4.2.0",
     "eslint": "^6.0.0",
-    "eslint-plugin-vue": "^6.2.2"
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "vue-jest": "^3.0.5"
   }
 }
