@@ -18,6 +18,7 @@ module.exports = {
   },
   globals: {
     'describe': false,
+    'test': false,
   },
   rules: {
     'camelcase': ['error', { 'properties': 'always' }],
