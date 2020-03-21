@@ -12,7 +12,7 @@ module.exports = {
       diagnotics: true,
     },
   },
-  testMatch: ['**/tests/**/*.spec.ts'],
+  testMatch: ['tests/**/*.spec.ts'],
   moduleFileExtensions: [
     'js',
     'ts',
@@ -23,4 +23,5 @@ module.exports = {
     '.*\\.(vue)$$': 'vue-jest',
     '^.+\\.tsx?$': 'ts-jest',
   },
+  testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
 };
