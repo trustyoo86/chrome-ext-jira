@@ -4,7 +4,8 @@ module.exports = {
   verbose: true,
   preset: 'ts-jest',
   moduleNameMapper: {
-    '@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^vue$': 'vue/dist/vue.common.js',
   },
   globals: {
     'ts-jest': {
@@ -12,10 +13,9 @@ module.exports = {
       diagnotics: true,
     },
   },
-  testMatch: ['tests/**/*.spec.ts'],
   moduleFileExtensions: [
-    'js',
     'ts',
+    'js',
     'json',
     'vue',
   ],
