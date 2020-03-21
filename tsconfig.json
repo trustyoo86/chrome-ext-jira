@@ -11,11 +11,10 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    // "types": [
-    //   "webpack-env",
-    //   "mocha",
-    //   "chai"
-    // ],
+    "types": [
+      "jest",
+      "chai"
+    ],
     "paths": {
       "@/*": [
         "src/*"
@@ -32,10 +31,9 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "src/**/tests/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }

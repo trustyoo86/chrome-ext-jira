@@ -15,6 +15,12 @@ module.exports = {
     'content': path.join(srcPath, 'content.ts'),
   },
 
+  output: {
+    path: distPath,
+    publicPath: '',
+    filename: '[name].js',
+  },
+
   module: {
     rules: [
       {

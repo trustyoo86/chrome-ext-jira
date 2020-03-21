@@ -16,6 +16,9 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 2020,
   },
+  globals: {
+    'describe': false,
+  },
   rules: {
     'camelcase': ['error', { 'properties': 'always' }],
     'comma-spacing': ['error', { 'before': false, 'after': true }],
@@ -76,5 +79,6 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': ['off'],
     '@typescript-eslint/no-var-requires': ['off'],
     '@typescript-eslint/explicit-function-return-type': ['off'],
+    '@typescript-eslint/no-explicit-any': ['off'],
   },
 };
