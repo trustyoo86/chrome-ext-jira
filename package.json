@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "dev": "npm run clean && NODE_ENV=development webpack-dev-server",
     "prod": "NODE_ENV=production webpack",
-    "test": "jest"
+    "test": "jest --watch=true"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "ant-design-vue": "^1.4.12",
     "babel": "^6.23.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.1.0",
