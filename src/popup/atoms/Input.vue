@@ -11,5 +11,11 @@ export default Vue.extend({
   components: {
     [Input.name]: Input,
   },
+  props: {
+    value: {
+      type: String,
+      default: '',
+    },
+  },
 });
 </script>
