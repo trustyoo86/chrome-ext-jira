@@ -20,6 +20,11 @@ describe('[Atoms] Input test', () => {
         value,
       },
     });
-    expect(wrapper.find('input').element.value).equal('test');
+    const $input = wrapper.find('input');
+    const el = $input.element as HTMLInputElement;
+    expect(el.value).equal('test');
+    $input.setValue('test1');
+    const changeEl = $input.element as HTMLInputElement;
+    expect(changeEl.value).equal('test1');
   });
 });
