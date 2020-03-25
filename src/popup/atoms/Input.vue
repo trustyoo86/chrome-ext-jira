@@ -1,5 +1,5 @@
 <template>
-  <a-input />
+  <a-input v-model="val" />
 </template>
 
 <script lang="ts">
@@ -16,6 +16,11 @@ export default Vue.extend({
       type: String,
       default: '',
     },
+  },
+  data() {
+    return {
+      val: this.value,
+    };
   },
 });
 </script>
