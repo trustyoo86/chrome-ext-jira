@@ -1,16 +1,21 @@
 <template>
   <div id="app">
     <!-- {{ test }} -->
-    <router-view />
+    <j-layout>
+      <router-view />
+    </j-layout>
   </div>
 </template>
 
 <script lang="ts">
-export default {
-  data() {
-    return {
-      test: 'test!',
-    };
+import Vue from 'vue';
+import Component from 'vue-class-component';
+import Layout from '@/popup/organisms/Layout.vue';
+
+@Component({
+  components: {
+    'j-layout': Layout,
   },
-};
+})
+export default class App extends Vue {}
 </script>
