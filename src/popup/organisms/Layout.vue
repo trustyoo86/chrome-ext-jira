@@ -1,6 +1,6 @@
 <template>
   <a-layout class="layout">
-    <jr-header />
+    <jr-header :title="headerTitle" />
     <jr-content>
       <slot />
     </jr-content>
@@ -10,6 +10,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { Prop } from 'vue-property-decorator';
 
 import Header from '@/popup/molecules/Header.vue';
 import Content from '@/popup/molecules/Content.vue';
@@ -20,5 +21,8 @@ import Content from '@/popup/molecules/Content.vue';
     'jr-content': Content,
   },
 })
-export default class Layout extends Vue {}
+export default class Layout extends Vue {
+  @Prop()
+  headerTitle!: string;
+}
 </script>

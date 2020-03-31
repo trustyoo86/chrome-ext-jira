@@ -7,15 +7,20 @@
       :form="form"
       :label-col="{ span: 5 }"
       :wrapper-col="{ span: 12 }"
+      @submit="handleSubmit"
     >
       <a-form-item label="JIRA URL">
-        <a-input v-model="test" />
+        <a-input 
+          v-decorator="decorator"
+          :value="url"
+          placeholder="ex) https://jira.test.com"
+        />
       </a-form-item>
       <a-form-item
         :wrapper-col="{ span: 12, offset: 5 }"
       >
         <a-button
-          type="primary" 
+          type="primary"
           html-type="submit"
         >
           Submit
@@ -23,14 +28,6 @@
       </a-form-item>
     </a-form>
   </div>
-  <!-- <a-layout class="layout">
-    <a-layout-header>
-      <div class="logo" />
-    </a-layout-header>
-    <a-layout-content style="padding: 10px 20px">
-      
-    </a-layout-content>
-  </a-layout> -->
 </template>
 
 <script lang="ts">
@@ -39,7 +36,7 @@ import Component from 'vue-class-component';
 
 @Component({})
 export default class Init extends Vue {
-  test = 'test';
+  url = '';
   styles = {
     container: {
       background: '#fff',
@@ -51,7 +48,24 @@ export default class Init extends Vue {
       'justify-content': 'center',
     },
   };
+  decorator = [
+    'url',
+    {
+      rules: [
+        { required: true, message: 'URL is required' },
+      ],
+    },
+  ];
   form = this.$form.createForm(this, {});
+
+  handleSubmit(e: Event) {
+    e.preventDefault();
+    this.form.validateFields((err: boolean, values: any) => {
+      if (!err) {
+        console.log('Received values of form:', values);
+      }
+    });
+  }
 }
 
 </script>
