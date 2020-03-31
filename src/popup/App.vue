@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <!-- {{ test }} -->
-    <j-layout>
+    <jr-layout header-title="테스트">
       <router-view />
-    </j-layout>
+    </jr-layout>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import Layout from '@/popup/organisms/Layout.vue';
 
 @Component({
   components: {
-    'j-layout': Layout,
+    'jr-layout': Layout,
   },
 })
 export default class App extends Vue {}
